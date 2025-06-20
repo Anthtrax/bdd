@@ -1,0 +1,3 @@
+select fecha from Registros_entrada where cedula_empleado like '17%'  and extract (month from fecha)= 9 
+select fecha from Registros_entrada where cedula_empleado like '17%' and hora between '09:00' and '12:00' and extract (month from fecha)=8 
+select fecha from Registros_entrada where cedula_empleado like '17%' and hora between '09:00' and '12:00' and extract (month from fecha)=8 or cedula_empleado like '08%' and extract (month from fecha)= 9 and hora between '09:00' and '13:00' 
