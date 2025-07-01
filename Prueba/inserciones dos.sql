@@ -1,34 +1,34 @@
 --usuario y cuentas
-select numero_cuenta,nombre from cuentas ,usuario where 
-cedula_propietario=cedula
+select numero_cuenta u,nombre c from cuentas c,usuario u where 
+cedula_propietario c =cedula u
 and saldo 
 between '100' and '1000'
 
-select* from cuentas ,usuario where 
-ccedula_usiario=cedula
-and fecha_creacion
+select* from cuentas c,usuario u where 
+cedula_propietario c=cedula u
+and fecha_creacion c
 between '2022/09/21' and '2023/09/21'
 --clientes y compras 
 
-select nombre,apellido,c from clientes ,compras
+select nombre cl,apellido cl,c from clientes cl,compras co
 where
-idCompras=id_compra 
-and cedula like '%7%'
+idCompras=id_compra co
+and cedula co like '%7%'
 
-select cedula,nombre,apellido,edad from clientes ,compras
+select cedula cl,nombre cl,apellido cl,edad cl from clientes cl,compras co
 where
-idCompras=id_compra 
-and cedula ='1727947720'
+idCompras=id_compra co
+and cedula co='1727947720'
 --estudiantes y profesor
-select *from estudiantes ,profesores 
+select *from estudiantes es ,profesores pr
 where 
-codigo=codigo
-and apellido like  '%n%'
+codigo pr=codigo pr
+and apellido es like  '%n%'
 
-select codigo,nombre,apellido,email,fecha_nacimiento from estudiantes ,profesores 
+select codigo pr,nombre es,apellido es,email es,fecha_nacimiento es from estudiantes es,profesores pr
 where 
-codigo=codigo
-and nombre ='Pepe'
+codigo pr=codigo es
+and nombre es ='Pepe'
 
 --persona y prestamo 
 
