@@ -7,9 +7,6 @@ create table Estudiantes(
 	apellido varchar(50) not null,
 	email varchar(50) not null,
 	fecha_nacimiento date not null,
-	curso int ,
-	paralelo char (1) ,
-	licenciado varchar (100) ,
 	constraint Estudiantes_pk primary key(cedula)
 )
 
