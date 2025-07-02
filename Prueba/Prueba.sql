@@ -27,3 +27,21 @@ insert into estado_civil(codigo,descripcion)
 values('C','CASADO');
 insert into estado_civil(codigo,descripcion)
 values('S','SOLTERO');
+
+-- COUNT
+select count(ec.codigo) from personas per , estado_civil ec 
+where per.estado_civil_codigo = ec.codigo
+and estado_civil_codigo = 'U'
+
+--AVG - PROMEDIO
+select avg(cast(cantidad_ahorrada as numeric)) from personas
+
+select sum(cast(cantidad_ahorrada as numeric)) from personas per , estado_civil ec 
+where per.estado_civil_codigo = ec.codigo
+and estado_civil_codigo = 'U'
+
+--MAX - MIN - SUM
+
+--group by 
+select estado_civil_codigo,sum(numero_hijos) from personas 
+group by estado_civil_codigo
